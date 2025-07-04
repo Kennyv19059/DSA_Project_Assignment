@@ -38,7 +38,7 @@ Where Customer_Segment = 'Consumer'
 Group By Customer_Name
 Order By Total_Profit Desc;
 
-3.Small business customer with highest sales
+3. Small business customer with highest sales
 ```sql
 Select Top 1  Customer_Name,
 Sum(Sales) As [Total Sales]
