@@ -93,7 +93,7 @@ Where Customer_Segment = 'Small Business'
 Group By Customer_Name
 Order By [Total Sales] Desc;
 
------8. Which Corporate Customer placed the most number of orders in 2009 – 2012-----
+-----8. Which Corporate Customer placed the most number of orders in 2009 â€“ 2012-----
 
 Select Top 1 Customer_Name,
 count (Distinct Order_Quantity) as Total_Order
