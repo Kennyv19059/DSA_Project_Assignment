@@ -17,6 +17,8 @@ The dataset contains the following key tables:
 - `KMS_Sales`: Main sales transactions
 - `Order_Status`: Return status of each order
 
+![KMS Sales](KMS_Sales.sql)
+
 ## Sample Queries
 
 ### 1. Product Category Highest Sales
