@@ -1,14 +1,15 @@
 # SQL Case Study – KMS Sales Analysis
 
-This project is a complete SQL-based analysis of the "KMS Sales" dataset.  
-It explores customer behavior, shipping performance, product sales, and profitability using real SQL queries on Microsoft SQL Server.
+This is a structured SQL case study project analyzing the KMS Sales dataset using Microsoft SQL Server.  
+It demonstrates practical SQL skills in data cleaning, joining, grouping, filtering, and business insights extraction.
 
 ## Project Objectives
 
-- Analyze product performance by category and segment
-- Identify most and least profitable customers
-- Evaluate shipping cost efficiency
-- Investigate return behavior and customer impact
+- Analyze total and segment-based sales performance
+- Identify the most valuable and least profitable customers
+- Evaluate shipping methods and their cost-effectiveness
+- Study return patterns by segment and customer
+- Provide actionable insights for management
 
 ## Dataset Summary
 
@@ -26,16 +27,31 @@ From KMS_Sales
 Group By Product_Category
 Order By Total_Sales Desc;
 
-### 2.Top 3 and Bottom 3 regions in terms of sales
+### 2. Most Profitable Customers
 ```sql
-Top 3
+Select Top 1 Customer_Name,
+Sum(Profit) As Total_Profit
+From KMS_Sales
+Where Customer_Segment = 'Consumer'
+Group By Customer_Name
+Order By Total_Profit Desc;
 
-Select top 3  Row_ID, Region, Sales
-    From KMS_Sales
-    Order by Sales desc
+### 3.Small business customer with highest sales
+```sql
+Select Top 1  Customer_Name,
+Sum(Sales) As [Total Sales]
+From KMS_Sales
+Where Customer_Segment = 'Small Business'
+Group By Customer_Name
+Order By [Total Sales] Desc;
 
-Lowest 3
+## Key Insights
+Some high-priority orders used slower shipping methods, increasing customer risk
+Corporate customers dominated total sales between 2009–2012
+The Consumer segment returned the most items, indicating either poor fit or expectation gaps
+Appliances underperformed in specific provinces like Ontario
 
-Select top 3  Row_ID, Region, Sales
-    From KMS_Sales
-    Order by Sales asc
+## Tools Used
+SQL Server Management Studio (SSMS)
+Microsoft Excel (for data pre-cleaning)
+GitHub (to publish and document analysis)
