@@ -27,7 +27,7 @@ From KMS_Sales
 Group By Product_Category
 Order By Total_Sales Desc;
 
-### 2. Most Profitable Customers
+2. Most Profitable Customers
 ```sql
 Select Top 1 Customer_Name,
 Sum(Profit) As Total_Profit
@@ -36,7 +36,7 @@ Where Customer_Segment = 'Consumer'
 Group By Customer_Name
 Order By Total_Profit Desc;
 
-### 3.Small business customer with highest sales
+3.Small business customer with highest sales
 ```sql
 Select Top 1  Customer_Name,
 Sum(Sales) As [Total Sales]
@@ -45,13 +45,13 @@ Where Customer_Segment = 'Small Business'
 Group By Customer_Name
 Order By [Total Sales] Desc;
 
-## Key Insights
+Key Insights
 Some high-priority orders used slower shipping methods, increasing customer risk
 Corporate customers dominated total sales between 2009–2012
 The Consumer segment returned the most items, indicating either poor fit or expectation gaps
 Appliances underperformed in specific provinces like Ontario
 
-## Tools Used
+Tools Used
 SQL Server Management Studio (SSMS)
 Microsoft Excel (for data pre-cleaning)
 GitHub (to publish and document analysis)
