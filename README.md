@@ -55,3 +55,8 @@ Tools Used
 SQL Server Management Studio (SSMS)
 Microsoft Excel (for data pre-cleaning)
 GitHub (to publish and document analysis)
+
+Author
+Babalola Kehinde Vincent
+Email: kenny19059@gmail.com
+LinkedIn: linkedin.com/in/kehinde-babalola25
